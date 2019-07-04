@@ -1,0 +1,29 @@
+import random
+tom=Turtle()
+tom.shape('turtle')
+tom.width(5)
+tom.speed(0)
+
+class Shape:
+	def __init__(self):
+		self.x = []
+		self.y = []
+        
+	def add_post(self, px, py):
+		self.x.append(px)
+		self.y.append(py)
+        
+	def randS(self,c1,c2,c3,c4,c5):
+		cBox = [c1,c2,c3,c4,c5]
+		num = int(input())
+		for i in range (num):
+			tom.stamp()
+			tom.pu()
+			tom.color(random.choice(cBox))
+			tom.goto(self.x[i],self.y[i])
+			tom.pd()
+                
+s = Shape()
+for i in range (300):
+	s.add_post(random.randint(-300,300), random.randint(-300,300))
+s.randS("cyan","coral","maroon","dark green","white")
