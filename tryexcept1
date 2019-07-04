@@ -1,0 +1,13 @@
+tom=Turtle()
+tom.shape('turtle')
+tom.color('green')
+
+try:
+    import random
+except ImportError:
+    print ("NO module found")
+else:
+    for i in range (10):
+		x = random.randint(0,100)
+		y = random.randint(0,100)
+		print (x*y,x,y)
