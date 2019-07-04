@@ -1,0 +1,23 @@
+tom=Turtle()
+tom.shape('turtle')
+tom.width(1)
+tom.speed(0)
+import random
+tom.color('purple')
+
+class Shape:
+	def __init__(self, radius):
+		self.radius = radius
+        
+	def draw(self,c1,c2,c3,c4):
+		cBox = [c1,c2,c3,c4]
+		for i in range (10):
+			for x in range (36):
+				tom.color(random.choice(cBox))
+				tom.stamp()
+				tom.circle(self.radius,10)
+			tom.rt(360.0/10)
+            
+s = Shape(100)
+s.draw("blue","red","yellow","green")
+tom.ht()
